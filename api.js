@@ -2,6 +2,7 @@ class ScormAPI {
 
     constructor() {
         this.values = [];
+        this.lastError = null;
 
         console.log("Scorm 1.2 API created");
     }
@@ -34,7 +35,7 @@ class ScormAPI {
     
     LMSGetLastError() {
         console.log("LMSGetLastError()");
-        return "0";
+        return this.lastError ? this.lastError : "0";
     }
     
     LMSGetErrorString(errorCode) {
