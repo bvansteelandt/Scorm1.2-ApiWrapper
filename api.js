@@ -1,6 +1,8 @@
 class ScormAPI {
 
     constructor() {
+        this.values = [];
+
         console.log("Scorm 1.2 API created");
     }
 
@@ -16,12 +18,12 @@ class ScormAPI {
 
     LMSGetValue(key) {
         console.log("LMSGetValue(element):LMSGetValue(" + key + ")");
-        return typeof this[key] !== "undefined" ? this[key] : "";
+        return typeof this.values[key] !== "undefined" ? this.values[key] : "";
     }
 
     LMSSetValue(key, value) {
         console.log("LMSSetValue(element,value):LMSSetValue(" + key + "," + value + ")");
-        this[key] = value;
+        this.values[key] = value;
         return true;
     }
     
