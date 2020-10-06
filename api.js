@@ -28,7 +28,7 @@ class ScormAPI {
         return true;
     }
     
-    LMSCommit() {
+    LMSCommit(parameter) {
         console.log("LMSCommit(parameter):LMSCommit(" + parameter + ")");
         return true;
     }
